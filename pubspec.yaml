@@ -27,9 +27,10 @@ flutter:
 
   assets:
      - images/nuremberg.jpg
-     - images/header.jpg
      - images/devfest23_logo.svg
+     - images/devfest23_logo.png
      - images/devfest23_logo_dark.svg
+     - images/devfest23_logo_dark.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

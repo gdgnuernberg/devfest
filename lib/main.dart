@@ -1,5 +1,6 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 void main() {
@@ -33,7 +34,6 @@ class _DevFestHomePageState extends State<DevFestHomePage> {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.sizeOf(context);
-    final widthGreaterThanHeight = size.width > size.height;
     return Scaffold(
       body: Container(
         height: double.infinity,
@@ -70,11 +70,9 @@ class _DevFestHomePageState extends State<DevFestHomePage> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          SvgPicture.asset(
-                            height: widthGreaterThanHeight ? size.width / 6 : null,
-                            width: widthGreaterThanHeight ? null : size.width / 6,
-                            'images/devfest23_logo_dark.svg',
-                            semanticsLabel: 'DevFest Logo',
+                          Image.asset(
+                            width: min(size.width / 2, 540),
+                            'images/devfest23_logo_dark.png',
                           ),
                         ],
                       ),
