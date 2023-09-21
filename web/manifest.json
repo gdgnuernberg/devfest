@@ -5,7 +5,7 @@
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A Flutter Web project for the DevFest",
+    "description": "The landing page for DevFest 2023 in Nuremberg, Germany.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
