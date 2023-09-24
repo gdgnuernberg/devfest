@@ -76,6 +76,35 @@ class _DevFestHomePageState extends State<DevFestHomePage> {
                           ),
                         ],
                       ),
+                      TextButton(
+                        onPressed: () {
+                          launchUrlString(
+                            'https://www.google.com/calendar/render?action=TEMPLATE&text=DevFest+2023&dates=20231104T080000Z/20231104T170000Z&details=DevFest+2023+is+a+community+conference+featuring+technical+sessions+from+Google+Developer+Experts+and+local+community+speakers+on+multiple+tracks+covering+Flutter%2C+Android%2C+Firebase%2C+Google+Cloud+Platform%2C+and+more.&location=Solgerstrasse+18,+90429+N%C3%BCrnberg,+Germany&sf=true&output=xml',
+                          );
+                        },
+                        child: const Text(
+                          'November 4, 2023',
+                          style: TextStyle(
+                            fontSize: 24,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                      TextButton(
+                        onPressed: () {
+                          launchUrlString(
+                            'https://www.google.com/maps/dir/?api=1&destination=Solgerstrasse+18,+90429+N%C3%BCrnberg,+Germany&travelmode=driving',
+                          );
+                        },
+                        child: const Text(
+                          'Solgerstrasse 18',
+                          style: TextStyle(
+                            fontSize: 24,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                      const SizedBox(height: 32),
                       ButtonBar(
                         alignment: MainAxisAlignment.center,
                         children: [
