@@ -108,13 +108,40 @@ class _DevFestHomePageState extends State<DevFestHomePage> {
                       ButtonBar(
                         alignment: MainAxisAlignment.center,
                         children: [
-                          ElevatedButton(
-                            onPressed: () {
-                              launchUrlString(
-                                'https://sessionize.com/devfest-nuremberg-2023',
-                              );
-                            },
-                            child: const Text('Call for Speakers'),
+                          Stack(
+                            children: [
+                              ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                  disabledForegroundColor: Colors.white,
+                                  disabledBackgroundColor: Colors.grey,
+                                ),
+                                onPressed: null,
+                                child: const Text('Call for Speakers'),
+                              ),
+                              Positioned(
+                                right: 0,
+                                left: 0,
+                                child: Transform.translate(
+                                  offset: const Offset(0, 8),
+                                  child: Transform.rotate(
+                                    angle: pi / 10,
+                                    child: DecoratedBox(
+                                      decoration: BoxDecoration(
+                                        color: Colors.white.withOpacity(0.4),
+                                        borderRadius: BorderRadius.circular(16),
+                                      ),
+                                      child: const Center(
+                                        child: Text(
+                                          'Closed',
+                                          textScaleFactor: 0.8,
+                                          style: TextStyle(color: Colors.red),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
                           const SizedBox(width: 16),
                           ElevatedButton(
